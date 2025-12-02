@@ -1,0 +1,17 @@
+{
+  "name": "deribit-latency-tester dev",
+  "dockerComposeFile": [
+    "../docker-compose.yaml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/app",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "vadimcn.vscode-lldb"
+      ]
+    }
+  }
+}

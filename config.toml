@@ -1,0 +1,31 @@
+# Deribit latency tester configuration
+
+# Use Deribit testnet (true) or mainnet (false).
+testnet = false
+
+# Instrument to trade / test against.
+instrument_name = "BTC_USDC-PERPETUAL"
+
+# Order parameters.
+side = "sell"
+order_amount = 0.0001
+base_price = 10000.0
+
+# How far each edit moves the quote further away (in percentage points).
+price_offset_percent = 5.0
+edit_offset_step_percent = 0.5
+
+# How many (side + edit + cancel) iterations to run.
+num_iterations = 1
+
+# Pacing between RPC requests (in seconds).
+sleep_between_requests_secs = 0.5
+
+# CSV output file (relative to the working directory).
+output_latency_csv = "output/local_latency.csv"
+
+# Subscribe to raw book market data for tick-based latency metrics.
+subscribe_raw_book = true
+
+# Print summary statistics after the run finishes.
+print_summary = true

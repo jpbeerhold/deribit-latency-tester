@@ -1,0 +1,115 @@
+############################
+# Rust / Cargo
+############################
+
+# Build artifacts
+/target
+/debug
+
+# Optional: ignore Cargo.lock for libraries
+# (Keep it for binary projects)
+/Cargo.lock
+
+# rustfmt backup files
+**/*.rs.bk
+
+# Windows rustc debug info
+*.pdb
+
+# cargo-mutants output
+**/mutants.out*/
+
+############################
+# Editor / IDE Files
+############################
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (CLion, RustRover)
+.idea/
+*.iml
+
+# Vim / Emacs / others
+*.swp
+*.swo
+
+############################
+# Logs & Temporary Files
+############################
+
+*.log
+*.tmp
+*.out
+*.tmp
+*.bak
+*.swp
+
+############################
+# OS Files
+############################
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+############################
+# Secrets & Credentials
+############################
+
+# Environment variable files
+.env
+.env.*
+!.env.example
+
+# Key & certificate files
+*.key
+*.pem
+*.p12
+*.crt
+*.der
+
+# Secret folders
+secrets/
+config/secrets.*
+config/*.secret.*
+
+# SSH keys
+.ssh/
+
+# Cloud provider credentials
+.aws/
+.azure/
+.gcp/
+
+############################
+# Docker / Container
+############################
+
+# Docker build artifacts
+*.tar
+*.img
+
+# Avoid committing local compose overrides
+docker-compose.override.yml
+
+############################
+# Build / Output Directories
+############################
+
+/dist
+/build
+/bin
+
+############################
+# Caches & Temp Directories
+############################
+
+tmp/
+temp/
+.cache/
