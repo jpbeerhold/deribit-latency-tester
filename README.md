@@ -4,7 +4,7 @@
 [![Rust](https://img.shields.io/badge/Rust-stable-blue?logo=rust)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]()
 
-A lightweight and production‑grade tool for measuring **Deribit WebSocket RPC round‑trip latency**, including:
+A lightweight tool for measuring **Deribit WebSocket RPC round‑trip latency**, including:
 
 - Buy / Sell order latency  
 - Raw‑book tick‑aligned timestamps  
@@ -59,14 +59,20 @@ A lightweight and production‑grade tool for measuring **Deribit WebSocket RPC 
 
 # ⚡ Running the Tool
 
-Create `.env`:
+Clone this repo:
+
+```bash
+git clone https://github.com/jpbeerhold/deribit-latency-tester.git
+```
+
+Create `.env` and ensure that the `config.toml` is correctly configured:
 
 ```env
 DERIBIT_CLIENT_ID=your_client_id
 DERIBIT_CLIENT_SECRET=your_client_secret
 ```
 
-Load it:
+Load `.env`:
 
 ```bash
 set -a
@@ -74,15 +80,10 @@ source .env
 set +a
 ```
 
-Development:
+Run `deribit-latency-tester`:
 
 ```bash
-cargo run
-```
-
-Release:
-
-```bash
+cargo build
 cargo run --release
 ```
 
